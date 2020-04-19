@@ -1,0 +1,11 @@
+# Contents of /etc/systemd/system/myservice.service
+[Unit]
+Description=Garden sensor logger
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/home/pi/garden_scripts/runner.sh
+
+[Install]
+WantedBy=multi-user.target
